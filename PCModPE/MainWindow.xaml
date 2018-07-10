@@ -10,14 +10,16 @@
     <Grid>
         <TabControl>
             <TabItem Header="测试页面">
-                <cefSharp:ChromiumWebBrowser Name="myWebView" MouseRightButtonDown="myWebView_MouseRightButtonDown"></cefSharp:ChromiumWebBrowser>
+                <cefSharp:ChromiumWebBrowser Name="myWebView" ></cefSharp:ChromiumWebBrowser>
             </TabItem>
             <TabItem Header="代码编辑页面">
-                <TextBox>
-                    
-                </TextBox>
+                <RichTextBox>
+
+                </RichTextBox>
+            </TabItem>
+            <TabItem Header="文档">
+                <cefSharp:ChromiumWebBrowser Name="documenthtml"></cefSharp:ChromiumWebBrowser>
             </TabItem>
         </TabControl>
-      
     </Grid>
 </Window>

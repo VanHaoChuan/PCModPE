@@ -246,15 +246,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ModPE\document.html" />
     <Content Include="ModPE\Debugger.html" />
-    <Resource Include="ModPE\Document.txt" />
-    <Content Include="ModPE\GUI.js" />
     <Content Include="ModPE\LocalCode.js" />
     <Content Include="ModPE\mdl\material.css" />
     <Content Include="ModPE\mdl\material.js" />
     <Content Include="ModPE\mdl\material.min.css" />
     <Content Include="ModPE\mdl\material.min.js" />
-    <Content Include="ModPE\PCRunner.js" />
     <Resource Include="ModPE\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
