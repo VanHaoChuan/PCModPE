@@ -23,6 +23,12 @@ namespace PCModPE
         public MainWindow()
         {
             InitializeComponent();
+            myWebView.Address = @"C:\Users\Fanhaochuan\source\repos\PCModPE\PCModPE\ModPE\Debugger.html";
+        }
+        
+
+        private void myWebView_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
         }
     }
 }

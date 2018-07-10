@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.props" Condition="Exists('..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.props')" />
+  <Import Project="..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,6 +17,8 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +38,26 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -85,6 +111,132 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ModPE\.gitattributes" />
+    <None Include="ModPE\.git\COMMIT_EDITMSG" />
+    <None Include="ModPE\.git\config" />
+    <None Include="ModPE\.git\description" />
+    <None Include="ModPE\.git\FETCH_HEAD" />
+    <None Include="ModPE\.git\HEAD" />
+    <None Include="ModPE\.git\hooks\applypatch-msg.sample" />
+    <None Include="ModPE\.git\hooks\commit-msg.sample" />
+    <None Include="ModPE\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="ModPE\.git\hooks\post-update.sample" />
+    <None Include="ModPE\.git\hooks\pre-applypatch.sample" />
+    <None Include="ModPE\.git\hooks\pre-commit.sample" />
+    <None Include="ModPE\.git\hooks\pre-push.sample" />
+    <None Include="ModPE\.git\hooks\pre-rebase.sample" />
+    <None Include="ModPE\.git\hooks\pre-receive.sample" />
+    <None Include="ModPE\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="ModPE\.git\hooks\update.sample" />
+    <None Include="ModPE\.git\index" />
+    <None Include="ModPE\.git\info\exclude" />
+    <None Include="ModPE\.git\logs\HEAD" />
+    <None Include="ModPE\.git\logs\refs\heads\master" />
+    <None Include="ModPE\.git\logs\refs\remotes\origin\master" />
+    <None Include="ModPE\.git\objects\02\1bc2bf3ade1754317a88d233360bade1f42912" />
+    <None Include="ModPE\.git\objects\05\336c3705b347686f73765946a904e983693188" />
+    <None Include="ModPE\.git\objects\08\c39fa93977f607fa9c5e09f04e151597304e9e" />
+    <None Include="ModPE\.git\objects\0a\2d1f29546ddbe4c54528fb7f40dca49a17b7b3" />
+    <None Include="ModPE\.git\objects\0d\70d3e0cc01adaa7d46ffc5b6efcbe315ce37b7" />
+    <None Include="ModPE\.git\objects\13\bef55257b167019f73b5b7cb6d2a6c36d9d47e" />
+    <None Include="ModPE\.git\objects\19\5bc403a7d4681e2258ab8ccfa5728b019bea01" />
+    <None Include="ModPE\.git\objects\22\08cf7e1960a1be6968623561814edf09e6734f" />
+    <None Include="ModPE\.git\objects\22\b63e48efbcf1c83498e8193100992b732c92be" />
+    <None Include="ModPE\.git\objects\25\371a9a6d785754da05b95483cc7615ed96e3c8" />
+    <None Include="ModPE\.git\objects\2a\826c951458c91729c0d1c07fd343fa4e6d3508" />
+    <None Include="ModPE\.git\objects\2e\909e2606dccbae8027fb6be8fe6639aee78582" />
+    <None Include="ModPE\.git\objects\2e\9218d0e8fd16f41aa79c2a190dcbcee68686ab" />
+    <None Include="ModPE\.git\objects\36\64761c89f4ff113209b50db3e5c73916039a2c" />
+    <None Include="ModPE\.git\objects\38\797f56574a4cf3834e17119540929b32ee07fe" />
+    <None Include="ModPE\.git\objects\3a\faf5f94cf88d077d8dc16224b746ad282e2dc9" />
+    <None Include="ModPE\.git\objects\3c\399fe1a8a936324a9df5baf0bb25a57bf7ae25" />
+    <None Include="ModPE\.git\objects\3c\7d10e45629361ff2f83fc870a262e99f406bc2" />
+    <None Include="ModPE\.git\objects\3e\2a66894bcb1e9d4d8871e21d1e0cbd918ca31d" />
+    <None Include="ModPE\.git\objects\3e\4ca1be198cae00f0f40df418f771ebe1185b47" />
+    <None Include="ModPE\.git\objects\3f\12ee992aee308db6eae242a030692863d36015" />
+    <None Include="ModPE\.git\objects\41\22652eb505dde7b98c0afea3ae8b150c291d27" />
+    <None Include="ModPE\.git\objects\44\c96a477959b39866f63cedd7fa79d702896426" />
+    <None Include="ModPE\.git\objects\46\524fbc44fc0a1e274343f9d42f0cd2aac6523a" />
+    <None Include="ModPE\.git\objects\47\c0056f93531c6e1055556ffa1e5959e1ff3ec6" />
+    <None Include="ModPE\.git\objects\49\6881319bbb664d5cc657e052d4f481114ec4a2" />
+    <None Include="ModPE\.git\objects\4a\87c8d27e6b32eb2c06fa9c9a112e05fa78f9ca" />
+    <None Include="ModPE\.git\objects\5b\027bfb2b589606c2bbffea1e9f989b3b1999c2" />
+    <None Include="ModPE\.git\objects\5f\b4335b2c9e64a2735f53af526bbe9dc0c4092a" />
+    <None Include="ModPE\.git\objects\64\1fc5920b5cb62ad2de1e814fb9c7c7a49be635" />
+    <None Include="ModPE\.git\objects\67\6442cec15b01191bacd1a701b56b99ca4fced7" />
+    <None Include="ModPE\.git\objects\6c\7206e0dc7250c5f0d8326473d25aede1842428" />
+    <None Include="ModPE\.git\objects\6d\d7af9709b2a5c0559ccb1e1724e9a7e03b09ef" />
+    <None Include="ModPE\.git\objects\70\c3fb77efe2e52e1c823d09968429a51971f283" />
+    <None Include="ModPE\.git\objects\71\eecd036628e01323a2980aac8965ea9f95c6a6" />
+    <None Include="ModPE\.git\objects\72\46475cf29542e53c3cf08682f7fe3feb565fa3" />
+    <None Include="ModPE\.git\objects\73\d521bcfeaf757cf03358ee3a398888d72ec219" />
+    <None Include="ModPE\.git\objects\75\fc732547e4a2aaca25041e9a51e45743e6d4b9" />
+    <None Include="ModPE\.git\objects\77\ac0558f8b33abfdc51576e7aa50400d4d672ec" />
+    <None Include="ModPE\.git\objects\77\b6aba641df8a9cc07c5e4c7f32162e667d39bd" />
+    <None Include="ModPE\.git\objects\78\1f56b4066622e2243934c07b35b25e81ae8da5" />
+    <None Include="ModPE\.git\objects\7b\15c57bcb6f9f7655074677692731d4ccfe2539" />
+    <None Include="ModPE\.git\objects\7d\44bdeceb4ea426b1e88aab8b069a48e188a5a3" />
+    <None Include="ModPE\.git\objects\86\87ec4c48d37f94037e1cf159088d903929d991" />
+    <None Include="ModPE\.git\objects\88\5a7f3d774899e475243591bb70a2f09f7f0152" />
+    <None Include="ModPE\.git\objects\8b\345727070084d47853c38fbc6b37a36bf49e23" />
+    <None Include="ModPE\.git\objects\8f\8b6bcdca92770892d3fc19119e9775f716a17c" />
+    <None Include="ModPE\.git\objects\90\1bf29b58520b4c05068bf850e3185296a20a70" />
+    <None Include="ModPE\.git\objects\90\90492aa98a950497235b2ac51a2562ce8a48f6" />
+    <None Include="ModPE\.git\objects\92\01a3fc147e78d7f5fe791d29be5ef2e2ac1f44" />
+    <None Include="ModPE\.git\objects\98\3f0d5652c1352ab53f3737b8246932adb2be96" />
+    <None Include="ModPE\.git\objects\99\4825a4ba00b1e6f8435d98d4c88ee507067909" />
+    <None Include="ModPE\.git\objects\9a\617ff86f4195c72d4235a33be07dd9211e8d85" />
+    <None Include="ModPE\.git\objects\9f\af108657cbe88b3caa638b104c0969cdd31363" />
+    <None Include="ModPE\.git\objects\a1\d810864cbfc884de47f673101bb99bfb25cac5" />
+    <None Include="ModPE\.git\objects\a2\5ec76c3eacab745da6bcae0445cd933caf405b" />
+    <None Include="ModPE\.git\objects\a4\80080996f38e0b34aab6dc9c76278979858264" />
+    <None Include="ModPE\.git\objects\a9\089d9fd7b1ca913715343bdc1b8ea76fb33cea" />
+    <None Include="ModPE\.git\objects\aa\b2302b487ea232ae970e7d3b0108a696485473" />
+    <None Include="ModPE\.git\objects\ab\d1583f965b457af644d3f67aa073420deb3532" />
+    <None Include="ModPE\.git\objects\af\a43af87e3623080bf21559c38b2a4641652dab" />
+    <None Include="ModPE\.git\objects\b2\ba113840644213f39ccd77abe3d0c5306ba2eb" />
+    <None Include="ModPE\.git\objects\b4\29872428d04db32de11968671db3a9e7486550" />
+    <None Include="ModPE\.git\objects\b5\081a0cb0350129c07ea97d0a1f8ef93aa4014a" />
+    <None Include="ModPE\.git\objects\b7\abfdcc7cb42254fe5b92102727e133cfa2c584" />
+    <None Include="ModPE\.git\objects\b8\ff7eb0f839994d345cf2ba923919f6cb16b32f" />
+    <None Include="ModPE\.git\objects\b9\b23ed1c99c1cffeb737961820b7a85e1ae90c2" />
+    <None Include="ModPE\.git\objects\be\c7aca02ad312a42efee770480a135936b37a9c" />
+    <None Include="ModPE\.git\objects\c2\db35bfa49350c9ee5d4a7a8a08e1f0d598fefc" />
+    <None Include="ModPE\.git\objects\c3\b2423e669780b1304c6593d2c572c3efd6b5d8" />
+    <None Include="ModPE\.git\objects\c5\ee93acf15c7a31c2f716444ad60f9aae001711" />
+    <None Include="ModPE\.git\objects\d0\e002899f6370da5f20bb874d034564516df951" />
+    <None Include="ModPE\.git\objects\d5\e048f6fe4b038b4bb82669c0e3ba19bd07820f" />
+    <None Include="ModPE\.git\objects\d6\f52a012eb3b67b77b79283612e763e45e976c9" />
+    <None Include="ModPE\.git\objects\d8\d8a7b24e8f3cbecc729fed527a2ac4de196464" />
+    <None Include="ModPE\.git\objects\d9\cbc0e5bb418223f929fbf4aad27ff704f8fb09" />
+    <None Include="ModPE\.git\objects\da\1838e76bae4e81a937403bb79e2095ff06262a" />
+    <None Include="ModPE\.git\objects\da\35d7efc51910f647f1cd19c157f5160e74b605" />
+    <None Include="ModPE\.git\objects\da\f75cc22ddba4337b36ffd9c9da5279686a2c07" />
+    <None Include="ModPE\.git\objects\dc\928a452d3cfd11cb25dd89e66034c26f7e99ac" />
+    <None Include="ModPE\.git\objects\dd\719bae322240b9c9b7c52e781a71c5a6fea38a" />
+    <None Include="ModPE\.git\objects\df\e0770424b2a19faf507a501ebfc23be8f54e7b" />
+    <None Include="ModPE\.git\objects\e2\632ca4a7c8879d922b469c72c203ea6487e487" />
+    <None Include="ModPE\.git\objects\e4\6c50f21ee8f6270de31ea5b6bd5bc5c0164f6c" />
+    <None Include="ModPE\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <None Include="ModPE\.git\objects\ea\05b9c20ca6a64b57a82e18d487bea843b9f70c" />
+    <None Include="ModPE\.git\objects\ec\eebad913ec88bf8d55485ed54f6b5560cbf635" />
+    <None Include="ModPE\.git\objects\ee\9930c8c00d0d10870f59e935eb09dc00d5aa9c" />
+    <None Include="ModPE\.git\objects\f2\15b563096bfa2a999e0615ac1cd7ff535580db" />
+    <None Include="ModPE\.git\objects\f2\tmp_obj_1FlkYa" />
+    <None Include="ModPE\.git\objects\f2\tmp_obj_dXnkxa" />
+    <None Include="ModPE\.git\objects\f3\40e67208ce3f72d9bedcd647d2d79da2e5edb6" />
+    <None Include="ModPE\.git\objects\f8\cd894c15aa9fdc51475f6f93818b5b4765fc8a" />
+    <None Include="ModPE\.git\objects\fe\e7b16f9a314d1d2058a6fbf85b9bd322c2ddb2" />
+    <None Include="ModPE\.git\refs\heads\master" />
+    <None Include="ModPE\.git\refs\remotes\origin\master" />
+    <None Include="ModPE\mdl\bower.json" />
+    <None Include="ModPE\mdl\LICENSE" />
+    <None Include="ModPE\mdl\material.min.css.map" />
+    <None Include="ModPE\mdl\material.min.js.map" />
+    <None Include="ModPE\mdl\package.json" />
+    <Resource Include="ModPE\ROBOTO-LIGHT.TTF" />
+    <Resource Include="ModPE\ROBOTO-MEDIUM.TTF" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,5 +245,35 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModPE\Debugger.html" />
+    <Resource Include="ModPE\Document.txt" />
+    <Content Include="ModPE\GUI.js" />
+    <Content Include="ModPE\LocalCode.js" />
+    <Content Include="ModPE\mdl\material.css" />
+    <Content Include="ModPE\mdl\material.js" />
+    <Content Include="ModPE\mdl\material.min.css" />
+    <Content Include="ModPE\mdl\material.min.js" />
+    <Content Include="ModPE\PCRunner.js" />
+    <Resource Include="ModPE\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModPE\.git\objects\info\" />
+    <Folder Include="ModPE\.git\objects\pack\" />
+    <Folder Include="ModPE\.git\refs\tags\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.targets" Condition="Exists('..\packages\CefSharp.Wpf.63.0.3\build\CefSharp.Wpf.targets')" />
 </Project>
