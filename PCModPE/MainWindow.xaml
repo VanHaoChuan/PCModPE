@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:scintillaNet="clr-namespace:ScintillaNET;assembly=ScintillaNET"
         xmlns:local="clr-namespace:PCModPE"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -13,9 +14,6 @@
                 <cefSharp:ChromiumWebBrowser Name="myWebView" ></cefSharp:ChromiumWebBrowser>
             </TabItem>
             <TabItem Header="代码编辑页面">
-                <RichTextBox>
-
-                </RichTextBox>
             </TabItem>
             <TabItem Header="文档">
                 <cefSharp:ChromiumWebBrowser Name="documenthtml"></cefSharp:ChromiumWebBrowser>
